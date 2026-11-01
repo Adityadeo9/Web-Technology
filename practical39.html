@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Application</title>
+</head>
+<body>
+
+<h2>Web Technology Quiz</h2>
+
+<form id="quiz">
+
+    <p>1. HTML stands for?</p>
+    <input type="radio" name="q1" value="a"> HyperText Markup Language<br>
+    <input type="radio" name="q1" value="b"> HighText Machine Language<br>
+
+    <p>2. CSS is used for?</p>
+    <input type="radio" name="q2" value="a"> Programming logic<br>
+    <input type="radio" name="q2" value="b"> Styling webpages<br>
+
+    <p>3. JavaScript is used for?</p>
+    <input type="radio" name="q3" value="a"> Interactivity<br>
+    <input type="radio" name="q3" value="b"> Only page structure<br>
+
+    <br>
+    <button type="button" onclick="checkQuiz()">
+        Submit Quiz
+    </button>
+
+</form>
+
+<h3 id="result"></h3>
+
+<script>
+function checkQuiz() {
+    let score = 0;
+
+    if (document.querySelector('input[name="q1"]:checked')?.value == "a") {
+        score++;
+    }
+
+    if (document.querySelector('input[name="q2"]:checked')?.value == "b") {
+        score++;
+    }
+
+    if (document.querySelector('input[name="q3"]:checked')?.value == "a") {
+        score++;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + " / 3";
+}
+</script>
+
+</body>
+</html>

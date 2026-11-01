@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+</head>
+<body>
+
+<h2>Login Validation</h2>
+
+<form onsubmit="return validate()">
+
+    <input type="text" id="email" placeholder="Email">
+    <br><br>
+
+    <input type="password" id="password"
+           placeholder="Password">
+    <br><br>
+
+    <button type="submit">Login</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+function validate() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (!email.includes("@") || !email.includes(".")) {
+        document.getElementById("result").innerHTML =
+            "Enter a valid email";
+        return false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("result").innerHTML =
+            "Password must contain at least 6 characters";
+        return false;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Login validation successful";
+
+    return false;
+}
+</script>
+
+</body>
+</html>
