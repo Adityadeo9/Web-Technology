@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorial</title>
+</head>
+<body>
+
+<h2>Factorial Calculator</h2>
+
+<input type="number" id="num">
+<button onclick="factorial()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function factorial() {
+    let n = Number(document.getElementById("num").value);
+    let fact = 1;
+
+    if (!Number.isInteger(n) || n < 0 || n > 170) {
+        document.getElementById("result").innerHTML =
+            "Enter a valid integer from 0 to 170";
+        return;
+    }
+
+    for (let i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Factorial = " + fact;
+}
+</script>
+
+</body>
+</html>
