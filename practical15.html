@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Grid</title>
+<style>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: lightblue;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Products</h2>
+
+<div class="container">
+    <div class="card">Product 1</div>
+    <div class="card">Product 2</div>
+    <div class="card">Product 3</div>
+    <div class="card">Product 4</div>
+    <div class="card">Product 5</div>
+    <div class="card">Product 6</div>
+</div>
+
+</body>
+</html>

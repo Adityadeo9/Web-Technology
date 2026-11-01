@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox Layout</title>
+<style>
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.left {
+    background: lightblue;
+    padding: 30px;
+    flex: 1;
+}
+
+.right {
+    background: lightgreen;
+    padding: 30px;
+    flex: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Two Column Layout</h2>
+
+<div class="container">
+    <div class="left">
+        <h3>Column 1</h3>
+        <p>HTML and CSS</p>
+    </div>
+
+    <div class="right">
+        <h3>Column 2</h3>
+        <p>JavaScript and React</p>
+    </div>
+</div>
+
+</body>
+</html>

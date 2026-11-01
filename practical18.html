@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Page</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<style>
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    background: lightblue;
+    padding: 40px;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        background: lightgreen;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Webpage</h2>
+
+<div class="container">
+    <div class="box">First Section</div>
+    <div class="box">Second Section</div>
+</div>
+
+</body>
+</html>

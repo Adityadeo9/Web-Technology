@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Theme Example</title>
+<style>
+body {
+    background: white;
+    color: black;
+    font-family: Arial;
+}
+
+.dark {
+    background: black;
+    color: white;
+}
+
+button {
+    padding: 10px;
+}
+</style>
+</head>
+<body id="page">
+
+<h2>Theme Changing Website</h2>
+<p>Click the button to change theme.</p>
+
+<button onclick="changeTheme()">
+    Change Theme
+</button>
+
+<script>
+function changeTheme() {
+    document.getElementById("page")
+    .classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
